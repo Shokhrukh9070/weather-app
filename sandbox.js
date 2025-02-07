@@ -1,4 +1,4 @@
-console.log("Coming back wait for me...");
+// console.log("Coming back wait for me...");
 const weather = document.querySelector(".weather");
 const temp = document.querySelector(".temp");
 const city = document.querySelector(".city");
@@ -15,7 +15,7 @@ async function checkWeather(cityName) {
   const response = await fetch(apiUrl + cityName + `&appid=${apiKey}`);
   let data = await response.json();
 
-  //   console.log(data);
+  console.log(data);
 
   temp.innerHTML = Math.round(data.main.temp) + "°C";
   city.innerHTML = data.name;
